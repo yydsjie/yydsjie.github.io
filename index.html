@@ -4,26 +4,54 @@ layout: default
 title: 个人简历
 ---
 
-<section>
-  <h2>关于我</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3 class="card__title"><span><i class="fa-solid fa-user-astronaut"></i> 简介</span><span class="badge">2026</span></h3>
-      <ul>
-        <li>长安大学 电子信息硕士在读（研究：可见光室内融合定位/视觉），本科通信工程</li>
-        <li>方向：ROS / 定位融合 / SLAM / 嵌入式联调</li>
-        <li>偏工程落地：可复现（rosbag/日志）、可观测（误差曲线/指标）、可部署（参数/脚本）</li>
+<section class="hero card">
+  <div class="hero__row">
+    <div>
+      <h2 style="margin:0 0 6px;">个人亮点</h2>
+      <ul style="margin:8px 0 0 18px;">
+        <li>硕士在读（可见光室内融合定位/视觉），方向：定位融合 / SLAM / ROS / 嵌入式</li>
+        <li>具备仿真验证能力（MATLAB → ROS/Gazebo），能做可复现验证与误差可视化</li>
+        <li>做过 STM32 + ESP8266 端到端链路（采集→显示→上云→APP展示）</li>
       </ul>
-      <p class="small">公开网页建议隐藏电话；投递版再提供完整联系方式。</p>
     </div>
+    <div class="pillrow" style="justify-content:flex-end;">
+      <span class="pill">ROS</span><span class="pill">Gazebo</span><span class="pill">EKF</span>
+      <span class="pill">PSO</span><span class="pill">STM32</span><span class="pill">Linux</span>
+    </div>
+  </div>
 
-    <div class="card">
-      <h3 class="card__title"><span><i class="fa-solid fa-screwdriver-wrench"></i> 技能概览</span><span class="badge">Tech</span></h3>
+  <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+    <a class="btn" href="https://github.com/yydsjie" target="_blank" rel="noreferrer">
+      <i class="fa-brands fa-github"></i> GitHub
+    </a>
+    <!-- 你如果有PDF简历，可以放到 assets/resume.pdf，然后打开这个按钮 -->
+    <!--
+    <a class="btn btn--ghost" href="{{ '/assets/resume.pdf' | relative_url }}" target="_blank">
+      <i class="fa-solid fa-file-arrow-down"></i> 下载 PDF
+    </a>
+    -->
+  </div>
+</section>
+
+<div class="layout">
+  <!-- 左栏 -->
+  <aside class="col">
+    <section class="card">
+      <h3 class="card__title"><span><i class="fa-solid fa-screwdriver-wrench"></i> 技能</span><span class="badge">Skills</span></h3>
 
       <div class="skills">
         <div class="skill">
-          <div class="skill__name">Linux / 工具链</div>
+          <div class="skill__name">C / 嵌入式</div>
+          <div class="skill__bar"><div class="skill__fill" style="width:75%"></div></div>
+          <div class="skill__pct">75%</div>
+        </div>
+        <div class="skill">
+          <div class="skill__name">Python / 工具脚本</div>
+          <div class="skill__bar"><div class="skill__fill" style="width:70%"></div></div>
+          <div class="skill__pct">70%</div>
+        </div>
+        <div class="skill">
+          <div class="skill__name">Linux / 调试</div>
           <div class="skill__bar"><div class="skill__fill" style="width:80%"></div></div>
           <div class="skill__pct">80%</div>
         </div>
@@ -32,106 +60,91 @@ title: 个人简历
           <div class="skill__bar"><div class="skill__fill" style="width:70%"></div></div>
           <div class="skill__pct">70%</div>
         </div>
-        <div class="skill">
-          <div class="skill__name">算法：EKF / PSO</div>
-          <div class="skill__bar"><div class="skill__fill" style="width:70%"></div></div>
-          <div class="skill__pct">70%</div>
-        </div>
-        <div class="skill">
-          <div class="skill__name">嵌入式：STM32</div>
-          <div class="skill__bar"><div class="skill__fill" style="width:75%"></div></div>
-          <div class="skill__pct">75%</div>
-        </div>
       </div>
 
       <div class="pillrow">
-        <span class="pill">C</span>
-        <span class="pill">Python</span>
         <span class="pill">MATLAB</span>
         <span class="pill">SPI / I2C / UART</span>
         <span class="pill">ESP8266</span>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<hr/>
-
-<section>
-  <h2>教育经历</h2>
-  <div class="card">
-    <h3 class="card__title"><span><i class="fa-solid fa-graduation-cap"></i> 长安大学</span><span class="badge">Education</span></h3>
-    <ul>
-      <li><b>硕士｜电子信息</b>（2025.08 - 至今）研究方向：可见光室内条件下的融合定位（视觉）</li>
-      <li><b>本科｜通信工程</b>（2021.08 - 2025.06）主修：微机原理、DSP、数电/模电、通信原理、计算机网络、FPGA 等；荣誉：陕西省高等数学竞赛二等奖</li>
-    </ul>
-  </div>
-</section>
-
-<hr/>
-
-<section>
-  <h2>实习经历</h2>
-  <div class="card">
-    <h3 class="card__title"><span><i class="fa-solid fa-microchip"></i> 嵌入式工程师（实习）｜西安软通动力</span><span class="badge">2024.07 - 2024.09</span></h3>
-    <p><b>项目：基于 STM32 的环境监测节点</b></p>
-    <ul>
-      <li>传感器采集：DHT11、MQ-2、光照等；OLED 显示；SPI / I2C / UART 外设联调</li>
-      <li>无线上云：ESP8266 上传云端；APP 订阅阿里云平台展示数据</li>
-      <li>工程闭环：采集 → 处理 → 显示 → 上报 → 可视化；端到端联调与故障定位</li>
-    </ul>
-  </div>
-</section>
-
-<hr/>
-
-<section>
-  <h2>项目经历</h2>
-  <div class="grid">
-    <div class="card">
-      <h3 class="card__title"><span><i class="fa-solid fa-robot"></i> EKF SLAM / 融合定位仿真验证</span><span class="badge">MATLAB + ROS/Gazebo</span></h3>
+    <section class="card">
+      <h3 class="card__title"><span><i class="fa-solid fa-graduation-cap"></i> 教育</span><span class="badge">Edu</span></h3>
       <ul>
-        <li>MATLAB 仿真中实现 EKF 融合定位流程：轨迹估计、地图重建、数据关联</li>
-        <li>设计 8 字回环路径与噪声观测数据；轨迹/误差/地标可视化，对比 EKF 与纯推算精度</li>
-        <li>Linux + ROS 下搭建 Gazebo 场景进行功能验证与性能测试，沉淀可复现验证流程</li>
+        <li><b>长安大学｜电子信息 硕士</b>（2025.08 - 至今）<br/>可见光室内融合定位（视觉）</li>
+        <li style="margin-top:10px;"><b>长安大学｜通信工程 学士</b>（2021.08 - 2025.06）<br/>陕西省高等数学竞赛二等奖</li>
       </ul>
-      <!-- 没图先删掉 thumb 块，避免裂图 -->
-      <!--
-      <div class="thumb">
-        <img src="{{ '/assets/img/ekf.png' | relative_url }}" alt="ekf result">
-        <div class="caption">误差曲线 / 轨迹对比 / Gazebo 场景截图</div>
-      </div>
-      -->
-    </div>
+    </section>
 
-    <div class="card">
-      <h3 class="card__title"><span><i class="fa-solid fa-lightbulb"></i> 可见光 RSS 定位：PSO 优化求解</span><span class="badge">Algorithm Engineering</span></h3>
+    <section class="card">
+      <h3 class="card__title"><span><i class="fa-solid fa-award"></i> 证书</span><span class="badge">Cert</span></h3>
       <ul>
-        <li>主导 PSO 模块：算法架构、核心逻辑落地、参数调优与稳定性验证</li>
-        <li>改进：动态参数调整、子群并行更新、跨子群精英交换、早停策略，提升收敛效率</li>
-        <li>适配 LED 定位场景与室内环境参数，保障工程落地可用性</li>
+        <li>CET-4 / CET-6</li>
+        <li>计算机二级</li>
+        <li>普通话二乙</li>
+        <li>CSIG 会员</li>
       </ul>
-      <!--
-      <div class="thumb">
-        <img src="{{ '/assets/img/pso.png' | relative_url }}" alt="pso result">
-        <div class="caption">收敛曲线 / 误差分布 / 参数对比</div>
+    </section>
+  </aside>
+
+  <!-- 右栏 -->
+  <main class="col">
+    <section class="card">
+      <h3 class="card__title"><span><i class="fa-solid fa-briefcase"></i> 实习</span><span class="badge">2024</span></h3>
+      <h4 style="margin:6px 0 8px;">嵌入式工程师（实习）｜西安软通动力（2024.07 - 2024.09）</h4>
+      <p style="margin:0 0 8px;"><b>基于 STM32 的环境监测节点</b></p>
+      <ul>
+        <li>传感器采集：DHT11 / MQ-2 / 光照；OLED 显示；SPI / I2C / UART 联调</li>
+        <li>ESP8266 上云：上传云端，APP 订阅阿里云平台展示数据</li>
+        <li>端到端闭环：采集→显示→上报→可视化，具备故障定位经验</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h3 class="card__title"><span><i class="fa-solid fa-diagram-project"></i> 项目</span><span class="badge">Projects</span></h3>
+
+      <div class="project">
+        <div class="project__head">
+          <h4 style="margin:0;">EKF SLAM / 融合定位仿真验证</h4>
+          <div class="tags">
+            <span class="tag">EKF</span><span class="tag">MATLAB</span><span class="tag">ROS</span><span class="tag">Gazebo</span>
+          </div>
+        </div>
+        <ul>
+          <li>实现 EKF 融合定位流程：轨迹估计、地图重建、数据关联</li>
+          <li>8 字回环 + 噪声观测，搭建误差/轨迹/地标可视化，对比纯推算</li>
+          <li>Linux + ROS + Gazebo 搭建仿真场景进行功能验证与性能测试</li>
+        </ul>
+
+        <!-- 有图再打开 -->
+        <!--
+        <div class="thumb">
+          <img src="{{ '/assets/img/ekf.png' | relative_url }}" alt="ekf">
+          <div class="caption">轨迹对比 / 误差曲线</div>
+        </div>
+        -->
+
+        <div class="actions">
+          <!-- 你有代码仓库就填 -->
+          <!-- <a class="btn btn--ghost" href="你的项目仓库链接" target="_blank"><i class="fa-solid fa-code"></i> 查看代码</a> -->
+        </div>
       </div>
-      -->
-    </div>
-  </div>
-</section>
 
-<hr/>
+      <div class="project" style="margin-top:14px;">
+        <div class="project__head">
+          <h4 style="margin:0;">基于 PSO 的室内可见光 RSS 定位</h4>
+          <div class="tags">
+            <span class="tag">PSO</span><span class="tag">优化</span><span class="tag">RSS</span><span class="tag">定位</span>
+          </div>
+        </div>
+        <ul>
+          <li>主导 PSO 模块：架构设计、核心逻辑、参数调优、稳定性验证</li>
+          <li>动态参数、子群并行、跨子群精英交换、早停策略，提升收敛效率</li>
+          <li>适配 LED 定位与室内环境参数，保障工程落地可用性</li>
+        </ul>
+      </div>
 
-<section>
-  <h2>证书与其他</h2>
-  <div class="card">
-    <h3 class="card__title"><span><i class="fa-solid fa-award"></i> 证书</span><span class="badge">Cert</span></h3>
-    <ul>
-      <li>CSIG 会员（中国图像图形学会）</li>
-      <li>普通话：二级乙等</li>
-      <li>计算机：二级</li>
-      <li>英语：CET-4 / CET-6</li>
-    </ul>
-  </div>
-</section>
+    </section>
+  </main>
+</div>
