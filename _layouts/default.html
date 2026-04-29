@@ -1,0 +1,49 @@
+<!-- name=_layouts/default.html -->
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title }} - {{ site.title }}</title>
+
+  <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="header__left">
+        <img class="avatar" src="{{ '/assets/img/avatar.jpg' | relative_url }}" alt="avatar">
+      </div>
+
+      <div class="header__right">
+        <h1 class="name">李嘉杰</h1>
+        <p class="title">ROS / SLAM / 融合定位 / 嵌入式</p>
+
+        <div class="meta">
+          <span><i class="fa-solid fa-location-dot"></i> 西安</span>
+          <span><i class="fa-solid fa-envelope"></i> 1611124451@qq.com</span>
+          <span><i class="fa-brands fa-github"></i> <a href="https://github.com/yydsjie" target="_blank" rel="noreferrer">yydsjie</a></span>
+        </div>
+
+        <div class="chips">
+          <span class="chip chip--blue">C/C++</span>
+          <span class="chip chip--green">Linux</span>
+          <span class="chip chip--purple">ROS</span>
+          <span class="chip chip--orange">Gazebo</span>
+          <span class="chip chip--red">EKF / PSO</span>
+          <span class="chip chip--teal">STM32</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      {{ content }}
+    </main>
+
+    <footer class="footer">
+      <span>© {{ site.time | date: '%Y' }} 李嘉杰</span>
+    </footer>
+  </div>
+</body>
+</html>
